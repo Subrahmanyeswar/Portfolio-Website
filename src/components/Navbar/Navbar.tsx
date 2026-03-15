@@ -136,6 +136,14 @@ export default function Navbar() {
                 </a>
               );
             })}
+            
+            <a 
+              href="/resume.pdf?v=2" 
+              download="Subrahmanyeswar Kolluru Resume.pdf"
+              className={styles.resumeBtn}
+            >
+              Resume 📥
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}

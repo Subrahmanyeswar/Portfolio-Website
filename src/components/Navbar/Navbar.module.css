@@ -131,6 +131,24 @@
   z-index: -1;
 }
 
+.resumeBtn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-accent);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  margin-left: var(--space-md);
+  transition: transform var(--duration-fast), filter var(--duration-fast);
+  white-space: nowrap;
+}
+
+.resumeBtn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
 /* ── Mobile Menu Button ── */
 .mobileMenuBtn {
   display: flex;
