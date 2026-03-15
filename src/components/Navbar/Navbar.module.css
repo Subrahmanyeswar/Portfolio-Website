@@ -1,0 +1,225 @@
+/* ═══════════════════════════════════════════════════════
+   Navbar Styles
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Progress Bar ── */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  z-index: 100;
+}
+
+/* ── Main Navbar ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  transition: background-color var(--duration-normal) var(--ease-out),
+    backdrop-filter var(--duration-normal) var(--ease-out),
+    border-bottom var(--duration-normal) var(--ease-out);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.navbarScrolled {
+  background-color: rgba(247, 247, 245, 0.85); /* Semi-transparent bg */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navContainer {
+    padding-inline: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navContainer {
+    padding-inline: var(--space-3xl);
+  }
+}
+
+/* ── Logo ── */
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  transition: opacity var(--duration-fast);
+}
+
+.logoWrapper:hover {
+  opacity: 0.8;
+}
+
+.monogram {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.logoTitle {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-left: var(--space-sm);
+  border-left: 1px solid var(--color-border);
+}
+
+/* ── Desktop Nav ── */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  padding: 0.5rem 1rem;
+  transition: color var(--duration-fast);
+  z-index: 1;
+}
+
+.navLink:hover {
+  color: var(--color-text);
+}
+
+.navLinkActive {
+  color: var(--color-accent) !important;
+}
+
+.activeHighlight {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-accent-dim);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+
+/* ── Mobile Menu Button ── */
+.mobileMenuBtn {
+  display: flex;
+  padding: 0.5rem;
+  z-index: 60;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
+
+.hamburger {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburgerOpen span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ── Mobile Menu ── */
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-lg);
+  z-index: 40;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.mobileNavLink {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  padding-block: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileNavLinkActive {
+  color: var(--color-accent);
+}
+
+.mobileResumeBtn {
+  margin-top: var(--space-md);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: var(--color-accent);
+  padding: 1rem;
+  text-align: center;
+  border-radius: var(--radius-md);
+}

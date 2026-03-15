@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════
+   About Section Styles
+   ═══════════════════════════════════════════════════════ */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+  }
+}
+
+/* ── Left Column (Text) ── */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.accentDot {
+  color: var(--color-accent);
+}
+
+.bio {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  max-width: 55ch;
+  font-weight: 400;
+}
+
+/* ── Right Column (Stats Grid) ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl) var(--space-lg);
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--color-accent);
+}
+
+.statNumber {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  max-width: 15ch;
+}

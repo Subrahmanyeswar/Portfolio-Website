@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://subrahmanyeswarkolluru.vercel.app/sitemap.xml

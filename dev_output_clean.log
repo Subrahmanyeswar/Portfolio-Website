@@ -1,0 +1,41 @@
+﻿
+> portfolio-temp@0.1.0 dev
+> next dev
+
+npm :  ΓÜá Port 3000 
+is in use, trying 3001 
+instead.
+At line:1 char:1
++ npm run dev > 
+dev_output.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ( ΓÜá Port 300   
+ 0 ...g 3001 instea    
+d.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  Γû▓ Next.js 14.2.35
+  - Local:        http://localhost:3001
+
+ Γ£ô Starting...
+[Error: EPERM: 
+operation not 
+permitted, open 'C:\Use
+rs\SUBBU\Downloads\Subr
+ahmanyeswar Portfolio 
+Website\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\SUB
+BU\\Downloads\\Subrahma
+nyeswar Portfolio 
+Website\\.next\\trace'
+}
+ Γ£ô Ready in 2.5s

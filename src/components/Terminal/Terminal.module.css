@@ -1,0 +1,176 @@
+/* ═══════════════════════════════════════════════════════
+   Interactive Terminal Styles
+   ═══════════════════════════════════════════════════════ */
+
+.terminalSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.window {
+  background: #0F0F0E;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBar {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #FF5F56; }
+.yellow { background: #FFBD2E; }
+.green { background: #27C93F; }
+
+.promptPath {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Content Area ── */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  color: #E2E2DC;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+/* Chrome/Safari scrollbar */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.historyLine {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.commandInputLine {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--color-accent);
+}
+
+.output {
+  color: #A1A1AA;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* ── Input ── */
+.inputLine {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 0.25rem;
+}
+
+.prompt {
+  color: var(--color-accent);
+}
+
+.inputField {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #E2E2DC;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+}
+
+.cursor {
+  width: 8px;
+  height: 1.1em;
+  background: var(--color-accent);
+  display: inline-block;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Progress Bar Animation ── */
+.progressWrapper {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progressContainer {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--color-accent);
+  width: 0%;
+  animation: scanProgress 2.5s ease-out forwards;
+}
+
+@keyframes scanProgress {
+  0% { width: 0%; }
+  30% { width: 45%; }
+  50% { width: 48%; }
+  70% { width: 85%; }
+  100% { width: 100%; }
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.success {
+  color: #10B981;
+}

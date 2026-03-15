@@ -1,0 +1,336 @@
+/* ═══════════════════════════════════════════════════════
+   Projects Section Styles
+   ═══════════════════════════════════════════════════════ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ── Featured Card (Aeternum Hub) ── */
+.featuredCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  text-decoration: none;
+  color: inherit;
+}
+
+.featuredCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 1024px) {
+  .featuredCard {
+    grid-template-columns: 1.2fr 1fr;
+    padding: var(--space-2xl);
+  }
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.projectName {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.projectTagline {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+}
+
+.techPill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-muted);
+}
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+.metricBadge {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+}
+
+.metricValue {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.metricLabel {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.featureItem {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.featureItem::before {
+  content: "✦";
+  color: var(--color-accent);
+  font-size: 0.7rem;
+}
+
+.projectBullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-border);
+}
+
+.bulletItem {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  position: relative;
+}
+
+.projectActions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-xs);
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.githubLink:hover {
+  color: var(--color-accent);
+}
+
+.githubIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.publicationBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.researchBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: #10b98115;
+  color: #10b981;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Projects Grid ── */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gridCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: transform var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.gridCard:hover {
+  transform: scale(1.02);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.gridCardName {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.gridCardTagline {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+  flex-grow: 0;
+}
+
+.gridBullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+  flex-grow: 1;
+}
+
+.gridBulletItem {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.gridBulletItem::before {
+  content: "→";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+.gridMoreTech {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.gridMoreTech:hover {
+  background: var(--color-accent-dim);
+}
+
+.gridAction {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-top: var(--space-md);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.gridCard:hover .gridAction {
+  color: var(--color-accent);
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+}

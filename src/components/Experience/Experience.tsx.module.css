@@ -1,0 +1,182 @@
+/* ═══════════════════════════════════════════════════════
+   Experience Section Styles
+   ═══════════════════════════════════════════════════════ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.timelineWrapper {
+  position: relative;
+  padding-left: var(--space-xl);
+}
+
+/* ── The Self-Drawing Timeline Line ── */
+.timelineLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-border);
+  overflow: hidden;
+}
+
+.animatedLine {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent);
+  transform-origin: top;
+}
+
+/* ── Experience Entry ── */
+.entry {
+  position: relative;
+  padding-bottom: var(--space-3xl);
+}
+
+.entry:last-child {
+  padding-bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  left: -24px; /* Align with timeline center (wrapper padding - half stroke) */
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.role {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.company {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.projectName {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  opacity: 0.9;
+  margin-top: var(--space-xs);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2px;
+  margin-top: var(--space-sm);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.githubLink:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  max-width: 65ch;
+}
+
+.bullet {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.bullet::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+.metricsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.metricChip {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+}
+
+.metricLabel {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.metricValue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.researchChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: #10b98115;
+  color: #10b981;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  margin-top: var(--space-xs);
+}
