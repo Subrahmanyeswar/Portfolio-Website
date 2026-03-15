@@ -193,7 +193,7 @@ export default function ChatWidget() {
               color: '#0F0F0E',
               lineHeight: '1.5',
             }}>
-              Hi! I'm Subbu's AI twin. Ask me anything about my 
+              Hi! I&apos;m Subbu&apos;s AI twin. Ask me anything about my 
               projects, research, or experience!
             </div>
 

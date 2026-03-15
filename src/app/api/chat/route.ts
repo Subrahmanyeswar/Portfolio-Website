@@ -95,8 +95,9 @@ export async function POST(req: NextRequest) {
     const reply = data?.choices?.[0]?.message?.content;
 
     return NextResponse.json({ reply });
-  } catch (error: any) {
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.error('API Route Error:', error);
-    return NextResponse.json({ error: 'Internal server error', details: error.message }, { status: 500 });
+    return NextResponse.json({ error: 'Internal server error', details: errorMessage }, { status: 500 });
   }
 }
