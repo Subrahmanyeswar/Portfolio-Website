@@ -149,7 +149,7 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="/resume.pdf"
+            href="/resume.pdf?v=2"
             download="Subrahmanyeswar Kolluru Resume.pdf"
             className={styles.btnOutline}
           >
