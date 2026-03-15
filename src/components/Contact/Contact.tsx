@@ -87,7 +87,7 @@ export default function Contact() {
 
           <a 
             href="/resume.pdf" 
-            download 
+            download="Subrahmanyeswar Kolluru Resume.pdf" 
             className={styles.resumeBtn}
           >
             Download Resume (PDF) 📥

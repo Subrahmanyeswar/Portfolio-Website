@@ -180,7 +180,7 @@ export default function Navbar() {
               ))}
               <a 
                 href="/resume.pdf" 
-                download="Subrahmanyeswar_Kolluru_AI_Engineer_Resume_FINAL.pdf"
+                download="Subrahmanyeswar Kolluru Resume.pdf"
                 className={styles.mobileResumeBtn}
               >
                 Download Resume
