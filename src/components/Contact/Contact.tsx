@@ -86,7 +86,7 @@ export default function Contact() {
           </div>
 
           <a 
-            href="/resume.pdf?v=2" 
+            href="/resume.pdf?v=3" 
             download="Subrahmanyeswar Kolluru Resume.pdf" 
             className={styles.resumeBtn}
           >

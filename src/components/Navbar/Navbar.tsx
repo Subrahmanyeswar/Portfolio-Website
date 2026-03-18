@@ -138,7 +138,7 @@ export default function Navbar() {
             })}
             
             <a 
-              href="/resume.pdf?v=2" 
+              href="/resume.pdf?v=3" 
               download="Subrahmanyeswar Kolluru Resume.pdf"
               className={styles.resumeBtn}
             >
@@ -187,7 +187,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a 
-                href="/resume.pdf?v=2" 
+                href="/resume.pdf?v=3" 
                 download="Subrahmanyeswar Kolluru Resume.pdf"
                 className={styles.mobileResumeBtn}
               >
